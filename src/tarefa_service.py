@@ -25,3 +25,24 @@ class TarefaService:
                 return tarefa
 
         return None
+
+    def update(self, tarefa_id, novos_dados):
+        tarefa = self.get_by_id(tarefa_id)
+
+        if tarefa is None:
+            return None
+
+        tarefa["titulo"] = novos_dados["titulo"]
+        tarefa["descricao"] = novos_dados["descricao"]
+        tarefa["status"] = novos_dados["status"]
+
+        return tarefa
+
+    def delete(self, tarefa_id):
+        tarefa = self.get_by_id(tarefa_id)
+
+        if tarefa is None:
+            return False
+
+        self.tarefas.remove(tarefa)
+        return True
