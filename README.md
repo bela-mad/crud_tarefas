@@ -1,23 +1,23 @@
 # Gerenciador de Tarefas de Estudo com TDD
 
-<p align="justify"> &emsp;&emsp; Este projeto é um pequeno sistema de CRUD de tarefas de estudo desenvolvido com a metodologia TDD (Test Driven Development) pela discente Isabela Madureira Argolo para a disciplina de DEC095 - Engenharia de Software.
+<p align="justify">Este projeto é um pequeno sistema de CRUD de tarefas de estudo desenvolvido com a metodologia TDD (Test Driven Development) pela discente Isabela Madureira Argolo para a disciplina de DEC095 - Engenharia de Software.
 
-<p align="justify"> &emsp;&emsp; O objetivo principal é demonstrar, de forma prática, como escrever testes antes da implementação das funcionalidades, seguindo o ciclo Red, Green e Refactor.
+<p align="justify">O objetivo principal é demonstrar, de forma prática, como escrever testes antes da implementação das funcionalidades, seguindo o ciclo Red, Green e Refactor.
 
 ## Descrição do projeto
 
-<p align="justify"> &emsp;&emsp; O sistema permite gerenciar tarefas de estudo de forma simples. Cada tarefa possui:
+<p align="justify">O sistema permite gerenciar tarefas de estudo de forma simples. Cada tarefa possui:
 
 - ID;
 - Título;
 - Descrição;
 - Status.
 
-<p align="justify"> &emsp;&emsp; Os dados são armazenados em memória, sem uso de banco de dados, pois o foco da atividade é a aplicação da metodologia TDD.
+<p align="justify">Os dados são armazenados em memória, sem uso de banco de dados, pois o foco da atividade é a aplicação da metodologia TDD.
 
 ## Funcionalidades
 
-<p align="justify"> &emsp;&emsp; O projeto possui as seguintes funcionalidades:
+<p align="justify">O projeto possui as seguintes funcionalidades:
 
 - Criar tarefa de estudo;
 - Buscar todas as tarefas;
@@ -52,7 +52,7 @@ crud_tarefas/
 
 ## Metodologia TDD
 
-<p align="justify"> &emsp;&emsp; O desenvolvimento foi realizado utilizando a metodologia TDD, que consiste em escrever os testes antes da implementação do código funcional. O ciclo utilizado foi:
+<p align="justify">O desenvolvimento foi realizado utilizando a metodologia TDD, que consiste em escrever os testes antes da implementação do código funcional. O ciclo utilizado foi:
 
 1. **Red**: criação de um teste para uma funcionalidade ainda não implementada, fazendo o teste falhar;
 2. **Green**: implementação do código mínimo necessário para o teste passar;
