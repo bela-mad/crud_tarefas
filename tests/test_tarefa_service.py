@@ -76,5 +76,24 @@ class TestTarefaService(unittest.TestCase):
         self.assertTrue(resultado)
         self.assertEqual(len(tarefas), 0)
 
+    def test_return_none_get_tarefa_inexistente(self):
+        tarefa = self.service.get_by_id(999)
+
+        self.assertIsNone(tarefa)
+
+    def test_return_none_update_tarefa_inexistente(self):
+        resultado = self.service.update(999, {
+            "titulo": "Tarefa inexistente",
+            "descricao": "Essa tarefa não existe",
+            "status": "pendente"
+        })
+
+        self.assertIsNone(resultado)
+
+    def test_return_false_delete_tarefa_inexistente(self):
+        resultado = self.service.delete(999)
+
+        self.assertFalse(resultado)
+
 if __name__ == "__main__":
     unittest.main()
