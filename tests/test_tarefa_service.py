@@ -3,7 +3,13 @@ from src.tarefa_service import TarefaService
 
 
 class TestTarefaService(unittest.TestCase):
+    """ 
+    Testes automatizados para o serviço de tarefas de estudo. 
+    """
     def setUp(self):
+        """ 
+        Executa antes de cada teste, criando uma nova instância do serviço. 
+        """
         self.service = TarefaService()
 
     def test_create_tarefa_estudo(self):
