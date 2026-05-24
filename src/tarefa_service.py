@@ -15,3 +15,13 @@ class TarefaService:
         self.proximo_id += 1
 
         return nova_tarefa
+
+    def get_all(self):
+        return self.tarefas
+
+    def get_by_id(self, tarefa_id):
+        for tarefa in self.tarefas:
+            if tarefa["id"] == tarefa_id:
+                return tarefa
+
+        return None
