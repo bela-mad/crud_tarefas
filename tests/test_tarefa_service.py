@@ -46,6 +46,35 @@ class TestTarefaService(unittest.TestCase):
 
         self.assertEqual(tarefa_encontrada["titulo"], "Ler sobre Git")
 
+    def test_update_tarefa(self):
+        tarefa = self.service.create({
+            "titulo": "Estudar Python",
+            "descricao": "Revisar conceitos básicos",
+            "status": "pendente"
+        })
+
+        tarefa_atualizada = self.service.update(tarefa["id"], {
+            "titulo": "Estudar Python e R",
+            "descricao": "Revisar Python e R",
+            "status": "em andamento"
+        })
+
+        self.assertEqual(tarefa_atualizada["titulo"], "Estudar Python e R")
+        self.assertEqual(tarefa_atualizada["descricao"], "Revisar Python e R")
+        self.assertEqual(tarefa_atualizada["status"], "em andamento")
+
+    def test_delete_tarefa(self):
+        tarefa = self.service.create({
+            "titulo": "Fazer relatório",
+            "descricao": "Escrever relatório da atividade de TDD",
+            "status": "pendente"
+        })
+
+        resultado = self.service.delete(tarefa["id"])
+        tarefas = self.service.get_all()
+
+        self.assertTrue(resultado)
+        self.assertEqual(len(tarefas), 0)
 
 if __name__ == "__main__":
     unittest.main()
